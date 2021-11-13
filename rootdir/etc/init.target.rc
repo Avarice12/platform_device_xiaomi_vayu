@@ -55,6 +55,9 @@ on init && property:ro.boot.hwc=GLOBAL
 on property:ro.boot.product.hardware.sku=vayu
     enable vendor.nfc_hal_service
 
+    write /sys/class/devfreq/soc:qcom,cpu-cpu-llcc-bw/governor "bw_hwmon"
+    write /sys/class/devfreq/soc:qcom,cpu-llcc-ddr-bw/governor "bw_hwmon"
+
 on early-fs
     start vold
 
