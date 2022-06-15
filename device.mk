@@ -464,6 +464,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# Quick Tap
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.columbus.model=tap7cls_coral.tflite
+
 # Preopt SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
