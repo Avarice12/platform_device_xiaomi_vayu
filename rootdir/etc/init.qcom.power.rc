@@ -120,7 +120,6 @@ on property:init.svc.vendor.charger=running
     mkdir /mnt/vendor/persist/subsys 0770 root system
     start vendor.hvdcp_opti
     start vendor.power_off_alarm
-    start qcom-post-boot
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
     chown system system /sys/class/leds/white/brightness
